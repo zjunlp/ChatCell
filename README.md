@@ -21,7 +21,7 @@
 
 
 <div align=center><img src="figure/intro.gif" width="60%" height="100%" /></div>
-ChatCell allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
+<b>ChatCell</b> allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
 
 </div>
 
