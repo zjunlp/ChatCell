@@ -31,13 +31,15 @@ ChatCell allows researchers to input instructions in either natural or single-ce
 
 ## 📌 Table of Contents
 
-- <a href="#overview">🏖️ Overview</a>
-- <a href="#task">🧬 Single-cell Analysis Tasks</a>
-- <a href="#quickstart">🛠️ Quickstart</a>
-- <a href="#citation">📝 How to cite</a>
+- [🏖️ Overview](#1)
+- [🧬 Single-cell Analysis Tasks](#2)
+- [🛠️ Quickstart](#3)
+- [📝 How to cite](#1)
+
+
 ---
 
-## 🏖️ Overview
+<h2 id="1">🏖️ Overview</h2>
 
 Single-cell biology examines the intricate functions of the cells, ranging from energy production to genetic information transfer, playing a critical role in unraveling the fundamental principles of life and mechanisms influencing health and disease. The field has witnessed a surge in single-cell RNA sequencing (scRNA-seq) data, driven by advancements in high-throughput sequencing and reduced costs. Traditional single-cell foundation models leverage extensive scRNA-seq datasets, applying NLP techniques to analyze gene expression matrices—structured formats that simplify scRNA-seq data into computationally tractable representations—during pre-training. They are subsequently fine-tuned for distinct single-cell analysis tasks, as shown in Figure (a).
 
@@ -54,7 +56,8 @@ Subsequently, we employ templates to integrate this single-cell language with ta
 To improve the LLM's expertise in the single-cell domain,  we conduct vocabulary adaptation, enriching the model with a specialized single-cell lexicon.
 Following this, we utilize unified sequence generation to empower the model to adeptly execute a range of single-cell tasks.
 
-## 🧬 Single-cell Analysis Tasks
+
+<h2 id="2">🧬 Single-cell Analysis Tasks</h2>
 
 We concentrate on the following single-cell tasks:
 
@@ -72,7 +75,7 @@ The drug sensitivity prediction task aims to predict the response of different c
 
 
 
-## 🛠️ Quickstart
 
+<h2 id="3">🛠️ Quickstart</h2>
 
 
