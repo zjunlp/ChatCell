@@ -70,7 +70,7 @@ We concentrate on the following single-cell tasks:
 Random cell sentence generation challenges the model to create cell sentences devoid of predefined biological conditions or constraints. This task aims to evaluate the model's ability to generate valid and contextually appropriate cell sentences, potentially simulating natural variations in cellular behavior. 
 
 <p align="center">
-<img src="figure/example1.jpg"  width="70%" height="60%">
+<img src="figure/example1.jpg"  width="80%" height="60%">
 </p>
 
 
@@ -79,14 +79,14 @@ Pseudo-cell generation focuses on generating gene sequences tailored to specific
 
 
 <p align="center">
-<img src="figure/example2.jpg"  width="70%" height="60%">
+<img src="figure/example2.jpg"  width="80%" height="60%">
 </p>
 
 - <b>Cell Type Annotation.</b>
 For cell type annotation, the model is tasked with precisely classifying cells into their respective types based on gene expression patterns encapsulated in cell sentences. This task is fundamental for understanding cellular functions and interactions within tissues and organs, playing a crucial role in developmental biology and regenerative medicine.
 
 <p align="center">
-<img src="figure/example3.jpg"  width="70%" height="60%">
+<img src="figure/example3.jpg"  width="80%" height="60%">
 </p>
 
 - <b>Drug Sensitivity Prediction.</b>
@@ -94,10 +94,23 @@ The drug sensitivity prediction task aims to predict the response of different c
 
 
 <p align="center">
-<img src="figure/example4.jpg"  width="70%" height="60%">
+<img src="figure/example4.jpg"  width="80%" height="60%">
 </p>
 
 <h2 id="3">🛠️ Quickstart</h2>
+
++ **📚 Prepare the data**
+
+**Step1:**
+
+**Step2:**
+
++ **Train**
+
++ **Generate**
+
++ **Evaluate**
+
 
 
 <h2 id="4">📝 Cite</h2>
