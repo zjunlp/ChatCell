@@ -12,7 +12,7 @@
   <a href="#1">🏖️ Overview</a> •
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
   <a href="#3">🛠️ Quickstart</a> •
-  <a href="#4">📝 How to cite</a>
+  <a href="#4">📝 Cite</a>
 </p>
 
 [![Code License](https://img.shields.io/badge/Code%20License-MIT-green.svg)](https://github.com/zjunlp/ChatCell/blob/main/LICENSE)
@@ -34,7 +34,7 @@ ChatCell allows researchers to input instructions in either natural or single-ce
 - [🏖️ Overview](#1)
 - [🧬 Single-cell Analysis Tasks](#2)
 - [🛠️ Quickstart](#3)
-- [📝 How to cite](#4)
+- [📝 Cite](#4)
 
 
 ---
@@ -99,7 +99,7 @@ The drug sensitivity prediction task aims to predict the response of different c
 <h2 id="3">🛠️ Quickstart</h2>
 
 
-<h2 id="4">📝 How to cite</h2>
+<h2 id="4">📝 Cite</h2>
 
 If you use our repository, please cite the following related paper:
 ```
