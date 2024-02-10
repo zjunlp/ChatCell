@@ -9,10 +9,10 @@
   <a href="https://www.zjukg.org/project/ChatCell">💻 Project Page</a> •
   <a href="https://huggingface.co/datasets/zjunlp/Single-cell-Instructions">🤗 Dataset</a> •
   <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
-  <a href="#overview">🏖️ Overview</a> •
-  <a href="#tasks">🧬 Single-cell Analysis Tasks</a> •
-  <a href="#quickstart">🛠️ Quickstart</a> •
-  <a href="#citation">📝 How to cite</a>
+  <a href="#1">🏖️ Overview</a> •
+  <a href="#2">🧬 Single-cell Analysis Tasks</a> •
+  <a href="#3">🛠️ Quickstart</a> •
+  <a href="#4">📝 How to cite</a>
 </p>
 
 [![Code License](https://img.shields.io/badge/Code%20License-MIT-green.svg)](https://github.com/zjunlp/ChatCell/blob/main/LICENSE)
@@ -34,7 +34,7 @@ ChatCell allows researchers to input instructions in either natural or single-ce
 - [🏖️ Overview](#1)
 - [🧬 Single-cell Analysis Tasks](#2)
 - [🛠️ Quickstart](#3)
-- [📝 How to cite](#1)
+- [📝 How to cite](#4)
 
 
 ---
@@ -74,8 +74,19 @@ For cell type annotation, the model is tasked with precisely classifying cells i
 The drug sensitivity prediction task aims to predict the response of different cells to various drugs. It is pivotal in designing effective, personalized treatment plans and contributes significantly to drug development, especially in optimizing drug efficacy and safety.
 
 
-
-
 <h2 id="3">🛠️ Quickstart</h2>
+
+
+<h2 id="4">📝 How to cite</h2>
+
+If you use our repository, please cite the following related paper:
+```
+@article{fang2024chatcell,
+  title={ChatCell: Facilitating Single-Cell Analysis with Natural Language},
+  author={Fang, Yin and Liu, Kangwei and Zhang, Ningyu and Deng, Xinle and Yang, Penghui and Chen, Zhuo and Tang, Xiangru and Gerstein, Mark and Fan, Xiaohui and Chen, Huajun},
+  journal={arXiv preprint arXiv:2306.08018},
+  year={2024},
+}
+```
 
 
