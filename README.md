@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="figure/logo.png" width="6%" height="18%">
+<img src="figure/logo.png" width="8%" height="18%">
 <h2 align="center">  ChatCell: Facilitating Single-Cell Analysis with Natural Language </h2>
 
 <p align="center">
