@@ -99,17 +99,17 @@ The drug sensitivity prediction task aims to predict the response of different c
 
 <h2 id="3">🛠️ Quickstart</h2>
 
-+ **📚 Prepare the data**
+- **📚 Prepare the data**
 
 **Step1:**
 
 **Step2:**
 
-+ **Train**
+- **🔨 Train**
 
-+ **Generate**
+- **⌨️ Generate**
 
-+ **Evaluate**
+- **🔍 Evaluate**
 
 
 
