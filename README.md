@@ -3,8 +3,7 @@
 <div align="center">
 
 <img src="figure/logo.png" width="8%" height="18%">
-<h1 align="center">  ChatCell: Facilitating Single-Cell Analysis with Natural Language </h1>
-
+<h2 align="center">  ChatCell: Facilitating Single-Cell Analysis with Natural Language </h2>
 
 <p align="center">
   <a href="https://huggingface.co/datasets/zjunlp/Single-cell-Instructions">🤗 Dataset</a> •
