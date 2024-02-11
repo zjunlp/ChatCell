@@ -107,11 +107,15 @@ The drug sensitivity prediction task aims to predict the response of different c
   - To transform the data using the `transform.py` script, set `data_filepath` as the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Additionally, specify `output_dir` as the location where the resulting cell sentences will be stored. To execute the script, run: `python transform.py`
   - Configure the `mouse_to_json.py` file by setting the `input_path` to the subdirectory `cell_sentences_hf`, which is the `output_dir` specified in `transform.py`. Then, set `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to the paths for the train, valid, and test datasets in JSON format, respectively.To execute the script, run: `python mouse_to_json.py`
 
-**⌨️ GSE149383 and GSE117872** 
+- **⌨️ GSE149383 and GSE117872** 
 
 - Before running `GSE149383_to_json.py` or `GSE117872_to_json.py`, update the `expression_data_path` and `cell_info_path` with the locations of your `erl_total_data_2K.csv` (for GSE149383) or `GSE117872_good_Data_TPM.txt` (for GSE117872) and `erl_total_2K_meta.csv` (for GSE149383) or `GSE117872_good_Data_cellinfo.txt` (for GSE117872) files, respectively. Also, set the `output_json_path` for where you want the JSON outputs. Then, run the script with `python GSE149383_to_json.py` or `python GSE117872_to_json.py`.
 - In `split.py`, make the `input_path` the same as the `output_json_path` from above. Specify paths for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` for splitting the dataset. Run it with `python split.py`.
-    
+  
+**🔍Merge data**
+
+- In `merge.py`, configure the JSON file paths by specifying the locations for three distinct datasets - training, validation, and testing. These datasets originate from sources such as `GSE117872`, `GSE149383`, and `mouse`. Ensure these paths point to the JSON files previously generated.
+
 **Step2:**
 
 - **🔨 Train**
