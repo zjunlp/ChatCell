@@ -104,7 +104,7 @@ The drug sensitivity prediction task aims to predict the response of different c
 **Step1: Translate scRNA-seq data into cell sentence**
 
 - **🔨 SHARE-seq mouse skin dataset**
-  - To transform the data using the `transform.py` script, set `data_filepath` as the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Additionally, specify `output_dir` as the location where the resulting cell sentences will be stored. To execute the script, run: `python transform.py`
+  - To transform the data using the `transform.py` script, first, define `data_filepath` to point to the location of your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Next, designate `output_dir` for saving the generated cell sentences. Additionally, set the `eval_output_dir` parameter, which will be used to store figures and evaluation metrics. To initiate the transformation, execute the command: `python transform.py`.
   - Configure the `mouse_to_json.py` file by setting the `input_path` to the subdirectory `cell_sentences_hf`, which is the `output_dir` specified in `transform.py`. Then, set `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to the paths for the train, valid, and test datasets in JSON format, respectively.To execute the script, run: `python mouse_to_json.py`
 
 - **⌨️ GSE149383 and GSE117872 dataset** 
