@@ -107,13 +107,11 @@ The drug sensitivity prediction task aims to predict the response of different c
   - To transform the data using the `transform.py` script, set `data_filepath` as the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Additionally, specify `output_dir` as the location where the resulting cell sentences will be stored. To execute the script, run: `python transform.py`
   - Configure the `mouse_to_json.py` file by setting the `input_path` to the subdirectory `cell_sentences_hf`, which is the `output_dir` specified in `transform.py`. Then, set `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to the paths for the train, valid, and test datasets in JSON format, respectively.To execute the script, run: `python mouse_to_json.py`
 
-- **⌨️ GSE149383**
-  - To prepare for running the `GSE149383_to_json.py` script, please update the `data_filepath` and `meta_filepath` variables with the paths to your downloaded `erl_total_data_2K.csv` and `erl_total_2K_meta.csv` files, respectively. Additionally, adjust the `output_json_path` variable to specify the desired output path for the sentences in JSON format generated from the GSE149383 dataset. Once these modifications are made, proceed to execute the `python GSE149383_to_json.py` script.
-  - In the `split.py` script, configure the `input_path` to match the `output_json_path` specified in `GSE149383_to_json.py`. Then, assign `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to their respective file paths for the train, validation, and test datasets in JSON format.To execute the script, run: `python split.py`
+**⌨️ GSE149383 and GSE117872** 
 
-- **🔍 GSE117872**
-  - To prepare for running the `GSE117872_to_json.py` script, please update the `expression_data_path` and `cell_info_path` variables with the paths to your downloaded `GSE117872_good_Data_TPM.txt` and `GSE117872_good_Data_cellinfo.txt` files, respectively. Additionally, adjust the `output_json_path` variable to specify the desired output path for the sentences in JSON format generated from the GSE117872 dataset. Once these modifications are made, proceed to execute the `python GSE149383_to_json.py` script.
-  - In the `split.py` script, configure the `input_path` to match the `output_json_path` specified in `GSE117872_to_json.py`. Then, assign `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to their respective file paths for the train, validation, and test datasets in JSON format.To execute the script, run: `python split.py`
+- Before running `GSE149383_to_json.py` or `GSE117872_to_json.py`, update the `expression_data_path` and `cell_info_path` with the locations of your `erl_total_data_2K.csv` (for GSE149383) or `GSE117872_good_Data_TPM.txt` (for GSE117872) and `erl_total_2K_meta.csv` (for GSE149383) or `GSE117872_good_Data_cellinfo.txt` (for GSE117872) files, respectively. Also, set the `output_json_path` for where you want the JSON outputs. Then, run the script with `python GSE149383_to_json.py` or `python GSE117872_to_json.py`.
+- In `split.py`, make the `input_path` the same as the `output_json_path` from above. Specify paths for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` for splitting the dataset. Run it with `python split.py`.
+    
 **Step2:**
 
 - **🔨 Train**
