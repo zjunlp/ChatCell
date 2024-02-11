@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://www.zjukg.org/project/ChatCell">💻 Project Page</a> •
-  <a href="https://huggingface.co/datasets/zjunlp/SingleCell-Instructions">🤗 Dataset</a> •
+  <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
   <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
   <a href="#1">🏖️ Overview</a> •
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
