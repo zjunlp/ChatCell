@@ -101,7 +101,7 @@ The drug sensitivity prediction task aims to predict the response of different c
 
 - **📚 Prepare the data**
 
-**Step1: Translate scRNA-seq data into cell sentence **
+**Step1: Translate scRNA-seq data into cell sentence**
 
 - **🔨 SHARE-seq mouse skin dataset**
   - To transform the data using the `transform.py` script, set `data_filepath` as the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Additionally, specify `output_dir` as the location where the resulting cell sentences will be stored. To execute the script, run: `python transform.py`
