@@ -107,7 +107,7 @@ The drug sensitivity prediction task aims to predict the response of different c
   - To transform the data using the `transform.py` script, set `data_filepath` as the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Additionally, specify `output_dir` as the location where the resulting cell sentences will be stored. To execute the script, run: `python transform.py`
   - Configure the `mouse_to_json.py` file by setting the `input_path` to the subdirectory `cell_sentences_hf`, which is the `output_dir` specified in `transform.py`. Then, set `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to the paths for the train, valid, and test datasets in JSON format, respectively.To execute the script, run: `python mouse_to_json.py`
 
-- **⌨️ GSE149383 and GSE117872** 
+- **⌨️ GSE149383 and GSE117872 dataset** 
 
   - Before running `GSE149383_to_json.py` or `GSE117872_to_json.py`, update the `expression_data_path` and `cell_info_path` with the locations of your `erl_total_data_2K.csv` (for GSE149383) or `GSE117872_good_Data_TPM.txt` (for GSE117872) and `erl_total_2K_meta.csv` (for GSE149383) or `GSE117872_good_Data_cellinfo.txt` (for GSE117872) files, respectively. Also, set the `output_json_path` for where you want the JSON outputs. Then, run the script with `python GSE149383_to_json.py` or `python GSE117872_to_json.py`.
   - In `split.py`, make the `input_path` the same as the `output_json_path` from above. Specify paths for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` for splitting the dataset. Run it with `python split.py`.
@@ -125,10 +125,13 @@ The drug sensitivity prediction task aims to predict the response of different c
   - For web interface inference, set the appropriate parameters in `inference_web.py`, followed by running `python inference_web.py`.
   - For batch inference, adjust the required parameters in `inference_batch.py`, then proceed with `python inference_batch.py`.
 
-  
+**Step3: Pseudo-cell Generation - Translating Sentences into Expressions** 
 
-- **🔍 Evaluate**
+- **🔨Data Extraction**
+  - Extract data for generating cells based on cell type (for training datasets larger than 500, encompassing 16 types) by configuring the relevant parameters in `extract_gene_generation.py`. Execute with `python extract_gene_generation.py`.
 
+- **⌨️ Transformation Process**
+  - Following the generation of the files above, set the appropriate parameters in `sentence_to_expression.py` and run the script with `python sentence_to_expression.py`.
 
 
 <h2 id="4">📝 Cite</h2>
