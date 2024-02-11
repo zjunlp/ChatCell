@@ -116,7 +116,7 @@ The drug sensitivity prediction task aims to predict the response of different c
 
   - In `merge.py`, configure the JSON file paths by specifying the locations for three distinct datasets - training, validation, and testing. These datasets originate from sources such as `GSE117872`, `GSE149383`, and `mouse`. Ensure these paths point to the JSON files previously generated.
 
-**Step2:**
+**Step2: Train and Generate Execution**
 
 - **🔨 Train**
   - Set the parameters for `train_json_path`, `valid_json_path`, `tokenizer_path`, `model_path`, and `output_dir` in the `finetune.py` script, then run the code directly to initiate the fine-tuning process.
