@@ -122,7 +122,7 @@ The drug sensitivity prediction task aims to predict the response of different c
   - Set the parameters for `train_json_path`, `valid_json_path`, `tokenizer_path`, `model_path`, and `output_dir` in the `finetune.py` script, then run the code directly to initiate the fine-tuning process.
 - **⌨️ Generate**
   - For single-instance inference, configure the necessary parameters in `inference_one.py`, then execute `python inference_one.py`.
-  - For web interface inference, set the appropriate parameters in `inference_web.py`, followed by running `python inference_web.py`.
+  - For web interface inference, we have integrated a demo based on Gradio. To utilize this demo, begin by configuring the necessary parameters within the `inference_web.py` file. Following the parameter setup, launch the web interface by executing the script through the command `python inference_web.py` in your terminal.
   - For batch inference, adjust the required parameters in `inference_batch.py`, then proceed with `python inference_batch.py`.
 
 **Step3: Pseudo-cell Generation - Translating Sentences into Expressions** 
