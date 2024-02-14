@@ -5,10 +5,10 @@ import random
 random.seed(42)
 
 # Load the JSON data
-input_path='/newdisk1/lkw/chatcell_github/sentence_data/GSE117872.json'
-train_json_file_path='/newdisk1/lkw/chatcell_github/sentence_data/GSE117872/train.json'
-val_json_file_path='/newdisk1/lkw/chatcell_github/sentence_data/GSE117872/valid.json'
-test_json_file_path='/newdisk1/lkw/chatcell_github/sentence_data/GSE117872/test.json'
+input_path='GSE117872.json'
+train_json_file_path='GSE117872/train.json'
+val_json_file_path='GSE117872/valid.json'
+test_json_file_path='GSE117872/test.json'
 with open(input_path, 'r') as file:
     data = json.load(file)
 
