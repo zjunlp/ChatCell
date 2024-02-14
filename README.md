@@ -192,6 +192,8 @@ print(output_text)
 - Transformation Process:
   - After generating the necessary files, proceed by configuring `sentence_to_expression.py` with the appropriate parameters for the translation process.
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
+ 
+**To do: evaluation codes**
 
 <h2 id="5">📝 Cite</h2>
 
