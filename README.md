@@ -126,7 +126,7 @@ print(output_text)
 
 <h3 id="1">📚 Step1: Prepare the data</h3>
 
-❗️Note: You can download the original data from the `raw_data` directory. Alternatively, you can directly download the [data we provide on huggingface](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) to **skip Step 1 of the process**.
+❗️Note: You can download the original data from the `raw_data` directory. Alternatively, you can directly download the [processed data we provide on huggingface](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) to **skip Step 1 of the process**.
 
 **1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset.**
 
