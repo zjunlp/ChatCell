@@ -28,7 +28,9 @@
 
 ## 🆕 News
 
-- **\[Feb 2024\]** We released the model weights and datasets.
+- **\[Feb 2024\]** We released the model weights in [small](https://huggingface.co/zjunlp/chatcell-small), [base](https://huggingface.co/zjunlp/chatcell-base), and [large](https://huggingface.co/zjunlp/chatcell-large) configurations on Huggingface 🤗.
+- **\[Feb 2024\]** We released the [instructions of ChatCell](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) on Huggingface 🤗.
+- **\[Feb 2024\]** We released the [paper](https://arxiv.org/abs/2402.08303).
 
 
 ## 📌 Table of Contents
