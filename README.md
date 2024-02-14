@@ -21,7 +21,7 @@
 
 
 <div align=center><img src="figure/intro.gif" width="60%" height="100%" /></div>
-<b>ChatCell</b> allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
+[<b>ChatCell</b>](https://arxiv.org/abs/2402.08303) allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
 
 </div>
 
@@ -164,7 +164,7 @@ If you use our repository, please cite the following related paper:
 @article{fang2024chatcell,
   title={ChatCell: Facilitating Single-Cell Analysis with Natural Language},
   author={Fang, Yin and Liu, Kangwei and Zhang, Ningyu and Deng, Xinle and Yang, Penghui and Chen, Zhuo and Tang, Xiangru and Gerstein, Mark and Fan, Xiaohui and Chen, Huajun},
-  journal={arXiv preprint arXiv:2306.08018},
+  journal={arXiv preprint arXiv:2402.08303},
   year={2024},
 }
 ```
