@@ -99,18 +99,41 @@ The drug sensitivity prediction task aims to predict the response of different c
 
 <h2 id="3">🛠️ Quickstart</h2>
 
-- **📚 Prepare the data**
+Note: You can download the original data from the `raw_data` directory. Alternatively, you can **directly download the data we provide on [huggingface](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) to skip Step 1 of the process**.
 
-**Step1: Translate scRNA-seq data into cell sentence**
+<h3 id="1">📚 Step1: Prepare the data</h3>
 
-- **🔨 SHARE-seq mouse skin dataset**
-  - To transform the data using the `transform.py` script, first, define `data_filepath` to point to the location of your downloaded SHARE-seq mouse skin dataset `.h5ad` file. Next, designate `output_dir` for saving the generated cell sentences. Additionally, set the `eval_output_dir` parameter, which will be used to store figures and evaluation metrics. To initiate the transformation, execute the command: `python transform.py`.
-  - Configure the `mouse_to_json.py` file by setting the `input_path` to the subdirectory `cell_sentences_hf`, which is the `output_dir` specified in `transform.py`. Then, set `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to the paths for the train, valid, and test datasets in JSON format, respectively.To execute the script, run: `python mouse_to_json.py`
+For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset. 
 
-- **⌨️ GSE149383 and GSE117872 dataset** 
+Follow these steps to use the  `transform.py` script in `workflow_data` fold to **translate scENA-seq data into cell sentence**:
 
-  - Before running `GSE149383_to_json.py` or `GSE117872_to_json.py`, update the `expression_data_path` and `cell_info_path` with the locations of your `erl_total_data_2K.csv` (for GSE149383) or `GSE117872_good_Data_TPM.txt` (for GSE117872) and `erl_total_2K_meta.csv` (for GSE149383) or `GSE117872_good_Data_cellinfo.txt` (for GSE117872) files, respectively. Also, set the `output_json_path` for where you want the JSON outputs. Then, run the script with `python GSE149383_to_json.py` or `python GSE117872_to_json.py`.
-  - In `split.py`, make the `input_path` the same as the `output_json_path` from above. Specify paths for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` for splitting the dataset. Run it with `python split.py`.
+- Define `data_filepath` to specify the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file.
+- Define `output_dir` to specify directory where the generated cell sentences will be saved.
+- Define `eval_output_dir` to specify where figures and evaluation metrics will be stored.
+- Run the transformation process by executing the following command in your terminal: `python transform.py`.
+
+Then **covert cell sentences to instructions** with `mouse_to_json.py` in `workflow_data` fold:
+
+- Set `input_path` to the `output_dir` specified in  `transform.py`.
+- Define `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to specify the paths where you want to save your train, validation, and test datasets in JSON format, respectively.
+- Run the following command in your terminal to start the conversion process: `python mouse_to_json.py`.
+
+
+For the drug sensitivity prediction task, we select GSE149383 and GSE117872 datasets.
+
+- For GSE149383: Open `GSE149383_to_json.py`, define `expression_data_path` and `cell_info_path` to the location of your downloaded `erl_total_data_2K.csv` and `erl_total_2K_meta.csv` file.
+- For GSE117872: Open `GSE117872_to_json.py`, define `expression_data_path` and `cell_info_path` to the location of your downloaded `GSE117872_good_Data_TPM.txt` and `GSE117872_good_Data_cellinfo.txt` file.
+- Update `output_json_path` with the desired location for the JSON output files.
+- Execute the conversion script:
+  - Run `python GSE149383_to_json.py` for the GSE149383 dataset.
+  - Run `python GSE117872_to_json.py` for the GSE117872 dataset.
+- Open `split.py`, define `input_path` to the same locations as `output_json_path` used above. Specify the locations for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` where you want the split datasets to be saved.
+- Run the script with `python split.py` to split the dataset into training, validation, and test sets.
+
+After preparing instructions for each specific task, follow the steps below to merge the datasets using the `merge.py` script.
+
+- 
+
   
 - **🔍Merge data**
 
