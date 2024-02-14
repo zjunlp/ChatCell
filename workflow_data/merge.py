@@ -27,21 +27,21 @@ def merge_and_shuffle_json(file1_json_file_path, file2_json_file_path, file3_jso
     return merged_data
 
 # File paths
-mouse_train_json_file_path = '/newdisk1/lkw/chatcell/data/ma_2020_json_2/train.json'
-mouse_val_json_file_path = '/newdisk1/lkw/chatcell/data/ma_2020_json_2/valid.json'
-mouse_test_json_file_path = '/newdisk1/lkw/chatcell/data/ma_2020_json_2/test.json'
+mouse_train_json_file_path = 'ma_2020_json_2/train.json'
+mouse_val_json_file_path = 'ma_2020_json_2/valid.json'
+mouse_test_json_file_path = 'ma_2020_json_2/test.json'
 
-GSE117872_train_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/GSE117872/train.json'
-GSE117872_val_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/GSE117872/valid.json'
-GSE117872_test_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/GSE117872/test.json'
+GSE117872_train_json_file_path = 'GSE117872/train.json'
+GSE117872_val_json_file_path = 'GSE117872/valid.json'
+GSE117872_test_json_file_path = 'GSE117872/test.json'
 
-GSE149383_train_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/GSE149383/train.json'
-GSE149383_val_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/GSE149383/valid.json'
-GSE149383_test_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/GSE149383/test.json'
+GSE149383_train_json_file_path = 'GSE149383/train.json'
+GSE149383_val_json_file_path = 'GSE149383/valid.json'
+GSE149383_test_json_file_path = 'GSE149383/test.json'
 # Output file paths
-sum_train_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/sum/train.json'
-sum_val_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/sum/valid.json'
-sum_test_json_file_path = '/newdisk1/lkw/chatcell_github/sentence_data/sum/test.json'
+sum_train_json_file_path = 'sum/train.json'
+sum_val_json_file_path = 'sum/valid.json'
+sum_test_json_file_path = 'sum/test.json'
 
 # Merging and shuffling
 sum_train_data = merge_and_shuffle_json(GSE117872_train_json_file_path, GSE149383_train_json_file_path, mouse_train_json_file_path)
