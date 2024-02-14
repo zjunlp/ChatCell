@@ -24,10 +24,10 @@ def construct_template(drug_name, gene_list):
     return selected_template.format(drug_name, gene_list)
 
 # Read and process gene expression data
-expression_data_path = '/newdisk1/lkw/chatcell/data/drug/GSE117872/GSE117872_good_Data_TPM.txt'
+expression_data_path = 'GSE117872/GSE117872_good_Data_TPM.txt'
 # Read drug sensitivity data (adjust the file path and column names as necessary)
-cell_info_path = '/newdisk1/lkw/chatcell/data/drug/GSE117872/GSE117872_good_Data_cellinfo.txt'
-output_json_path = '/newdisk1/lkw/chatcell_github/GSE117872.json'
+cell_info_path = 'GSE117872/GSE117872_good_Data_cellinfo.txt'
+output_json_path = 'GSE117872.json'
 
 expression_data = pd.read_csv(expression_data_path, sep='\t').transpose()
 
