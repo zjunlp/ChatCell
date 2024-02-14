@@ -133,12 +133,9 @@ For the drug sensitivity prediction task, we select GSE149383 and GSE117872 data
 
 After preparing instructions for each specific task, follow the steps below to merge the datasets using the `merge.py` script.
 
-- 
+- Ensure that the paths for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` are correctly set to point to the JSON files you previously generated for each dataset, such as `GSE117872`, `GSE149383`, and `mouse`.
+- Run `python merge.py` to start the merging process. This will combine the specified training, validation, and testing datasets into a unified format, ready for further analysis or model training.
 
-  
-- **🔍Merge data**
-
-  - In `merge.py`, configure the JSON file paths by specifying the locations for three distinct datasets - training, validation, and testing. These datasets originate from sources such as `GSE117872`, `GSE149383`, and `mouse`. Ensure these paths point to the JSON files previously generated.
 
 **Step2: Train and Generate Execution**
 
