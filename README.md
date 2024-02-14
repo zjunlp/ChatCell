@@ -15,8 +15,9 @@
   <a href="https://arxiv.org/abs/2402.08303">📑 Paper</a> •
   <a href="#1">🏖️ Overview</a> •
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
-  <a href="#3">🛠️ Quickstart</a> •
-  <a href="#4">📝 Cite</a>
+  <a href="#3">⌚️ QuickStart</a> •
+  <a href="#4">🛠️ Usage</a> •
+  <a href="#5">📝 Cite</a>
 </p>
 
 
@@ -100,7 +101,27 @@ The drug sensitivity prediction task aims to predict the response of different c
 <img src="figure/example4.jpg"  width="80%" height="60%">
 </p>
 
-<h2 id="3">🛠️ Quickstart</h2>
+<h2 id="3">⌚️ QuickStart</h2>
+
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained("zjunlp/chatcell-small")
+model = AutoModelForSeq2SeqLM.from_pretrained("zjunlp/chatcell-small")
+
+input_text="Detail the 100 starting genes for a Mix, ranked by expression level: "
+# Encode the input text and generate a response with specified generation parameters
+input_ids = tokenizer(input_text,return_tensors="pt").input_ids
+output_ids = model.generate(input_ids, max_length=512, num_return_sequences=1, no_repeat_ngram_size=2, top_k=50, top_p=0.95, do_sample=True)
+
+# Decode and print the generated output text
+output_text = tokenizer.decode(output_ids[0],skip_special_tokens=True)
+print(output_text)
+```
+
+
+
+<h2 id="4">🛠️ Usage</h2>
 
 <h3 id="1">📚 Step1: Prepare the data</h3>
 
@@ -171,7 +192,7 @@ Then **covert cell sentences to instructions** with `mouse_to_json.py` in `workf
   - After generating the necessary files, proceed by configuring `sentence_to_expression.py` with the appropriate parameters for the translation process.
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
 
-<h2 id="4">📝 Cite</h2>
+<h2 id="5">📝 Cite</h2>
 
 If you use our repository, please cite the following related paper:
 ```
