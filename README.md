@@ -108,8 +108,8 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 tokenizer = AutoTokenizer.from_pretrained("zjunlp/chatcell-small")
 model = AutoModelForSeq2SeqLM.from_pretrained("zjunlp/chatcell-small")
-
 input_text="Detail the 100 starting genes for a Mix, ranked by expression level: "
+
 # Encode the input text and generate a response with specified generation parameters
 input_ids = tokenizer(input_text,return_tensors="pt").input_ids
 output_ids = model.generate(input_ids, max_length=512, num_return_sequences=1, no_repeat_ngram_size=2, top_k=50, top_p=0.95, do_sample=True)
