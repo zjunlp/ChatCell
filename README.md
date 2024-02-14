@@ -9,7 +9,7 @@
 <h2 align="center">  <img src="figure/logo.png" width="8%" height="18%"> ChatCell: Facilitating Single-Cell Analysis with Natural Language </h2>
 
 <p align="center">
-  <a href="https://www.zjukg.org/project/ChatCell">💻 Project Page</a> •
+  <a href="https://www.zjukg.org/project/ChatCell">💻 Homepage</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
   <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
   <a href="https://arxiv.org/abs/2402.08303">📑 Paper</a> •
