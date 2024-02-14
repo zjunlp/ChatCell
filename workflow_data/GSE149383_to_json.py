@@ -22,9 +22,9 @@ def construct_template(drug_name, gene_list):
     return selected_template.format(drug_name, gene_list)
 
 # Define file paths for CSV data and output JSON
-expression_data_path = '/newdisk1/lkw/chatcell/data/drug/GSE149383/erl_total_data_2K.csv'
-cell_info_path = '/newdisk1/lkw/chatcell/data/drug/GSE149383/erl_total_2K_meta.csv'
-output_json_path = '/newdisk1/lkw/chatcell_github/GSE149383.json'
+expression_data_path = 'GSE149383/erl_total_data_2K.csv'
+cell_info_path = 'GSE149383/erl_total_2K_meta.csv'
+output_json_path = 'GSE149383.json'
 
 # Load expression data from CSV
 expression_data = pd.read_csv(expression_data_path)
