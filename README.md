@@ -104,7 +104,7 @@ Note: You can download the original data from the `raw_data` directory. Alternat
 
 <h3 id="1">📚 Step1: Prepare the data</h3>
 
-1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset. 
+**1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset.**
 
 Follow these steps to use the  `transform.py` script in `workflow_data` fold to **translate scENA-seq data into cell sentence**:
 
@@ -120,7 +120,7 @@ Then **covert cell sentences to instructions** with `mouse_to_json.py` in `workf
 - Run the following command in your terminal to start the conversion process: `python mouse_to_json.py`.
 
 
-2. For the drug sensitivity prediction task, we select GSE149383 and GSE117872 datasets.
+**2. For the drug sensitivity prediction task, we select GSE149383 and GSE117872 datasets.**
 
 - For GSE149383: Open `GSE149383_to_json.py`, define `expression_data_path` and `cell_info_path` to the location of your downloaded `erl_total_data_2K.csv` and `erl_total_2K_meta.csv` file.
 - For GSE117872: Open `GSE117872_to_json.py`, define `expression_data_path` and `cell_info_path` to the location of your downloaded `GSE117872_good_Data_TPM.txt` and `GSE117872_good_Data_cellinfo.txt` file.
@@ -131,29 +131,43 @@ Then **covert cell sentences to instructions** with `mouse_to_json.py` in `workf
 - Open `split.py`, define `input_path` to the same locations as `output_json_path` used above. Specify the locations for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` where you want the split datasets to be saved.
 - Run the script with `python split.py` to split the dataset into training, validation, and test sets.
 
-3. After preparing instructions for each specific task, follow the steps below to merge the datasets using the `merge.py` script.
+**3. After preparing instructions for each specific task, follow the steps below to merge the datasets using the `merge.py` script.**
 
 - Ensure that the paths for `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` are correctly set to point to the JSON files you previously generated for each dataset, such as `GSE117872`, `GSE149383`, and `mouse`.
 - Run `python merge.py` to start the merging process. This will combine the specified training, validation, and testing datasets into a unified format, ready for further analysis or model training.
 
 
-**Step2: Train and Generate Execution**
+<h3 id="2">🛠️ Step2: Train and generate</h3>
 
-- **🔨 Train**
-  - Set the parameters for `train_json_path`, `valid_json_path`, `tokenizer_path`, `model_path`, and `output_dir` in the `finetune.py` script, then run the code directly to initiate the fine-tuning process.
-- **⌨️ Generate**
-  - For single-instance inference, configure the necessary parameters in `inference_one.py`, then execute `python inference_one.py`.
-  - For web interface inference, we have integrated a demo based on Gradio. To utilize this demo, begin by configuring the necessary parameters within the `inference_web.py` file. Following the parameter setup, launch the web interface by executing the script through the command `python inference_web.py`.
-  - For batch inference, adjust the required parameters in `inference_batch.py`, then proceed with `python inference_batch.py`.
+**1. Training**
 
-**Step3: Pseudo-cell Generation - Translating Sentences into Expressions** 
+- Open the `finetune.py` script. Update the script with the paths for your training and validation JSON files (`train_json_path` and `valid_json_path`), the tokenizer location (`tokenizer_path`), the base model directory (`model_path`), and the directory where you want to save the fine-tuned model (`output_dir`).
+- Execute the fine-tuning process by running the following command in your terminal: `python finetune.py`
 
-- **🔨Data Extraction**
-  - Extract data for generating cells based on cell type (for training datasets larger than 500, encompassing 16 types) by configuring the relevant parameters in `extract_gene_generation.py`. Execute with `python extract_gene_generation.py`.
+**2. Generation**
 
-- **⌨️ Transformation Process**
-  - Following the generation of the files above, set the appropriate parameters in `sentence_to_expression.py` and run the script with `python sentence_to_expression.py`.
+- Single-Instance Inference:
+  - To run inference on a single instance, set the necessary parameters in `inference_one.py`.
+  - Execute the script with: `python inference_one.py`.
+- Web Interface Inference:  
+  - For interactive web interface inference using Gradio, configure `inference_web.py` with the required parameters.
+  - Launch the web demo by running: `python inference_web.py`.
+- Batch Inference:  
+  - For inference on a batch of instances, adjust the parameters in `inference_batch.py` as needed.
+  - Start the batch inference process with: `python inference_batch.py`.
 
+
+<h3 id="3">⌨️ Step3: Translating sentences into gene expressions</h3>
+
+For the pseudo-cell generation task, we also translate sentences into gene expressions, encompassing data extraction and transformation stages.
+
+- Data Extraction:
+  - Open `extract_gene_generation.py`. Set up the necessary parameters for generating cells based on cell type. This step is intended for training datasets larger than 500 samples, covering 16 cell types.
+  - Run the following command in your terminal to start the data extraction process: `python extract_gene_generation.py`.
+
+- Transformation Process:
+  - After generating the necessary files, proceed by configuring `sentence_to_expression.py` with the appropriate parameters for the translation process.
+  - Execute the transformation script with the command: `python sentence_to_expression.py`.
 
 <h2 id="4">📝 Cite</h2>
 
