@@ -129,7 +129,7 @@ print(output_text)
 
 **1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset.**
 
-Follow these steps to use the  `transform.py` script in `workflow_data` fold to **translate scENA-seq data into cell sentence**:
+Follow these steps to use the  `transform.py` script in `workflow_data` folder to **translate scENA-seq data into cell sentence**:
 
 - Define `data_filepath` to specify the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file.
 - Define `output_dir` to specify directory where the generated cell sentences will be saved.
