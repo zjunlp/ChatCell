@@ -159,7 +159,7 @@ Then **covert cell sentences to instructions** with `mouse_to_json.py` in `workf
 
 <h3 id="3">⌨️ Step3: Translating sentences into gene expressions</h3>
 
-For the pseudo-cell generation task, we also translate sentences into gene expressions, encompassing data extraction and transformation stages.
+**For the pseudo-cell generation task, we also translate sentences into gene expressions, including data extraction and transformation stages.**
 
 - Data Extraction:
   - Open `extract_gene_generation.py`. Set up the necessary parameters for generating cells based on cell type. This step is intended for training datasets larger than 500 samples, covering 16 cell types.
