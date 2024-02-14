@@ -12,6 +12,7 @@
   <a href="https://www.zjukg.org/project/ChatCell">💻 Project Page</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
   <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
+  <a href="https://arxiv.org/abs/2402.08303">📑 Paper</a> •
   <a href="#1">🏖️ Overview</a> •
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
   <a href="#3">🛠️ Quickstart</a> •
@@ -21,7 +22,7 @@
 
 
 <div align=center><img src="figure/intro.gif" width="60%" height="100%" /></div>
-[<b>ChatCell</b>](https://arxiv.org/abs/2402.08303) allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
+<b>ChatCell</b> allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
 
 </div>
 
