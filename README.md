@@ -38,9 +38,9 @@
 
 - [🏖️ Overview](#1)
 - [🧬 Single-cell Analysis Tasks](#2)
-- [🛠️ Quickstart](#3)
-- [📝 Cite](#4)
-
+- [⌚️ QuickStart](#3)
+- [🛠️ Quickstart](#4)
+- [📝 Cite](#5)
 
 ---
 
