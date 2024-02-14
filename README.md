@@ -126,22 +126,22 @@ print(output_text)
 
 <h3 id="1">📚 Step1: Prepare the data</h3>
 
-❗️Note: You can download the original data from the `raw_data` directory. Alternatively, you can directly download the [processed data we provide on huggingface](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) to **skip Step 1 of the process**.
+❗️Note: You can download the original data from the `raw_data` directory. Alternatively, you can directly download the [pre-processed data we provide on huggingface](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) to **skip Step 1 of the process**.
 
 **1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset.**
 
-Follow these steps to use the  `transform.py` script in `workflow_data` folder to **translate scENA-seq data into cell sentence**:
+- Follow these steps to use the  `transform.py` script in [`workflow_data`](./workflow_data) to **translate scENA-seq data into cell sentence**:
 
-- Define `data_filepath` to specify the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file.
-- Define `output_dir` to specify directory where the generated cell sentences will be saved.
-- Define `eval_output_dir` to specify where figures and evaluation metrics will be stored.
-- Run the transformation process by executing the following command in your terminal: `python transform.py`.
+  - Define `data_filepath` to specify the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file.
+  - Define `output_dir` to specify the directory where the generated cell sentences will be saved.
+  - Define `eval_output_dir` to specify where figures and evaluation metrics will be stored.
+  - Run the transformation process by executing the following command in your terminal: `python transform.py`.
 
-Then **covert cell sentences to instructions** with `mouse_to_json.py` in `workflow_data` fold:
+- Then **covert cell sentences to instructions** with `mouse_to_json.py` in [`workflow_data`](./workflow_data):
 
-- Set `input_path` to the `output_dir` specified in  `transform.py`.
-- Define `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to specify the paths where you want to save your train, validation, and test datasets in JSON format, respectively.
-- Run the following command in your terminal to start the conversion process: `python mouse_to_json.py`.
+  - Set `input_path` to the `output_dir` specified in  `transform.py`.
+  - Define `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to specify the paths where you want to save your train, validation, and test datasets in JSON format, respectively.
+  - Run the following command in your terminal to start the conversion process: `python mouse_to_json.py`.
 
 
 **2. For the drug sensitivity prediction task, we select GSE149383 and GSE117872 datasets.**
