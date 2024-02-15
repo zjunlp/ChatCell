@@ -28,8 +28,8 @@ class KNNLevenshtein:
         most_common = Counter(k_neighbor_labels).most_common(1)
         return most_common[0][0]
 
-my_data_path=''
-ground_truth_data_path=''
+my_data_path='path_to_your_data.json'
+ground_truth_data_path='path_to_ground_truth_data.json'
 k = 5
 
 # Load data from the first file
