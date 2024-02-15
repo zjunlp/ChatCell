@@ -67,7 +67,7 @@ def evaluate_transformation(df, plotting_sample_size=10000):
                                     and 'log_preprocessed_rank'
         plotting_sample_size:   how many values to sample for plotting
     """
-    eval_output_dir=Path("")
+    eval_output_dir=Path("Output_directory_filepath/eval")
     eval_output_dir.mkdir(exist_ok=True, parents=True)
 
     # (1) Fit linear regression between log rank (x-axis) and log expression (y-axis)
@@ -273,13 +273,13 @@ if __name__ == "__main__":
         "--data_filepath",
         type=Path,
         help="Input data filepath.",
-        default='',
+        default='SHARE-seq_mouse_skin_dataset.h5ad',
     )
     parser.add_argument(
         "--output_dir",
         type=Path,
         help="Output directory filepath.",
-        default='',
+        default='Output_directory_filepath',
     )
     args = parser.parse_args()
 
