@@ -50,12 +50,12 @@ with gr.Blocks(css=css,
 
         gr.HTML("""
                 <div style="text-align: center; margin: 0 auto;">
-                <p><h1> Chatcell: Facilitating Single-Cell Engineering with Natural Language</h1>
+                <p><h1> Chatcell: Facilitating Single-Cell Analysis with Natural Language</h1>
                 </div>
 
         """)
     with gr.Row():
-        gr.Markdown("<p align='center'><a href='https://www.baidu.com'>🐣Project</a> &nbsp;&nbsp;&nbsp; <a href='https://www.baidu.com'>📃Paper</a>&nbsp;&nbsp;&nbsp; <a href='https://www.baidu.com'>🥳Code</a></p>")
+        gr.Markdown("<p align='center'><a href='https://www.zjukg.org/project/ChatCell'>🐣Project</a> &nbsp;&nbsp;&nbsp; <a href='https://arxiv.org/abs/2306.08018'>📃Paper</a>&nbsp;&nbsp;&nbsp; <a href='https://github.com/zjunlp/ChatCell'>🥳Code</a></p>")
 
     with gr.Row():
         input_box = gr.Textbox(value=capybara_problem, placeholder="Enter text here", lines=4, label="Input Text", )
@@ -100,13 +100,12 @@ with gr.Blocks(css=css,
         gr.Markdown(
             """
             ```bibtex
-            @article{fang2023mol,
-                title={Mol-Instructions: A Large-Scale Biomolecular Instruction Dataset for Large Language Models},
-                author={Fang, Yin and Liang, Xiaozhuan and Zhang, Ningyu and Liu, Kangwei and Huang, Rui and Chen, Zhuo and Fan, Xiaohui and Chen, Huajun},
-                journal={arXiv preprint arXiv:2306.08018},
-                year={2023}
+            @article{fang2024chatcell,
+                  title={ChatCell: Facilitating Single-Cell Analysis with Natural Language},
+                  author={Fang, Yin and Liu, Kangwei and Zhang, Ningyu and Deng, Xinle and Yang, Penghui and Chen, Zhuo and Tang, Xiangru and Gerstein, Mark and Fan, Xiaohui and Chen, Huajun},
+                  journal={arXiv preprint arXiv:2306.08018},
+                  year={2024}
             }
-
             """
         )
 
