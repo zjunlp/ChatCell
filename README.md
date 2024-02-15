@@ -196,7 +196,7 @@ print(output_text)
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
  
 
-<h2 id="5">🚀 Step4: Evaluation</h2>
+<h2 id="5">🚀 Evaluation</h2>
 
 To evaluate the performance of various tasks, follow these steps:
 
