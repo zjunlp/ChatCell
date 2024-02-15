@@ -131,16 +131,18 @@ print(output_text)
 
 ❗️Note: You can download the original data from the `raw_data` directory. Alternatively, you can directly download the [pre-processed data we provide on huggingface](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) to **skip Step 1 of the process**.
 
+Change to the evaluation directory with the command: `cd workflow_data`.
+
 **1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset.**
 
-- Follow these steps to use the  `transform.py` script in [`workflow_data`](./workflow_data) to **translate scENA-seq data into cell sentence**:
+- Follow these steps to use the  `transform.py` script to **translate scENA-seq data into cell sentence**:
 
   - Define `data_filepath` to specify the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file.
   - Define `output_dir` to specify the directory where the generated cell sentences will be saved.
   - Define `eval_output_dir` to specify where figures and evaluation metrics will be stored.
   - Run the transformation process by executing the following command in your terminal: `python transform.py`.
 
-- Then **covert cell sentences to instructions** with `mouse_to_json.py` in [`workflow_data`](./workflow_data):
+- Then **covert cell sentences to instructions** with `mouse_to_json.py`:
 
   - Set `input_path` to the `output_dir` specified in  `transform.py`.
   - Define `train_json_file_path`, `val_json_file_path`, and `test_json_file_path` to specify the paths where you want to save your train, validation, and test datasets in JSON format, respectively.
