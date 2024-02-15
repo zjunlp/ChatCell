@@ -84,16 +84,11 @@ with gr.Blocks(css=css,
         gr.Markdown(
             """
             - `Accuracy` :
-                - AI-generated text detectors aim for accuracy, but achieving 100% is challenging.
-                - The provided prediction is for demo purposes only and should not be considered a consumer product.
-                - Users are advised to exercise discretion, and we assume no liability for any use.
-            - `Detection Use Cases` : 
-                - In this work, our focus is to achieve an ultra-low false positive rate, crucial for sensitive downstream use case (e.g., avoiding false accusations in academic honesty cases). 
-                - We find optimal application in content moderation, for example in detecting AI-generated reviews on platforms like Amazon, Google, Yelp, etc. This represents one of the most compelling and noteworthy use cases for Binoculars.
-            - `Human Supervision Advisory` :
-                - Strongly caution against using Binoculars (or any detector) without human supervision.
-            - `Performance by Language` :
-                - As noted in our paper, Binoculars exhibit superior detection performance in the English language compared to other languages.
+                - This model aims for accuracy but cannot guarantee 100% precision. Results should be used as a guide, not as definitive tools.
+            - `Use Restrictions`: 
+                - Intended for educational and research purposes only. Not for clinical or commercial use without prior verification.
+            - `Responsibility`: 
+                - Users are solely responsible for any outcomes resulting from the use of this model.             
             """
         )
     with gr.Accordion("Cite our work", open=False):
