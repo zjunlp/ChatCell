@@ -47,8 +47,8 @@ def calculate_statistics(json_path, global_path):
     print("Unique gene count:", unique_gene_count, round(100 * unique_gene_count / total_gene_count, 2))
 
 # Paths to input files
-json_path = ''
-global_path = ''
+json_path = 'path_to_your_data.json'
+global_path = 'vocab_human.txt' 
 
 # Call the function to calculate statistics
 calculate_statistics(json_path, global_path)
