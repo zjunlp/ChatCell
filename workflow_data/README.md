@@ -1,5 +1,5 @@
-## Acknowledgements 
+## ✨ Acknowledgements 
 
-Special thanks to the authors of "Cell2Sentence: Teaching Large Language Models the Language of Biology" for their inspiring work. 
+Special thanks to the authors of ["Cell2Sentence: Teaching Large Language Models the Language of Biology"](https://github.com/vandijklab/cell2sentence-ft) for their inspiring work. 
 
-The `src` folder and `transform.py` in this project are based on their research. Grateful for their contributions to the field. 
+The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/transform.py) in this project are grounded in their research. Grateful for their valuable contributions to the field. 
