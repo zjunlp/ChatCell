@@ -210,8 +210,8 @@ To evaluate the performance of various tasks, follow these steps:
 
 - Pseudo-cell Generation Task:
   - Depending on the format of your data, open `python Performance_of_pseudo-cell_generation_lev.py`, or `python Performance_of_pseudo-cell_generation_expr.py`.
-  - Specify the `my_data_path` to the JSON file with the generated pseudo-cell data.
-  - Specify the `ground_truth_data_path` to the JSON file with the ground truth data.
+  - Specify the `my_data_path` to the file with the generated pseudo-cell data.
+  - Specify the `ground_truth_data_path` to the file with the ground truth data.
   - Specify the `k` to the K-value for KNN analysis.
   - Depending on the format of your data, run: `python Performance_of_pseudo-cell_generation_lev.py`, or `python Performance_of_pseudo-cell_generation_expr.py`.
 
