@@ -5,7 +5,7 @@ To evaluate the performance of various tasks, follow these steps:
 - Random Cell Generation Task:
   - Open `Performance_of_random_cell_generation.py`.
   - Specify the `json_path` to the JSON file with the generated data.
-  - Specify the `global_path` to the global gene vocabulary file, usually located in the `cell_sentences` subdirectory within `output_dir` specified by the `transform.py` script, and is named `vocab_human.txt`.￼￼￼
+  - Specify the `global_path` to the global gene vocabulary file, usually located in the `cell_sentences` subdirectory within `output_dir` specified by the `transform.py` script, and is named `vocab_human.txt`.
   - Run the command: `python Performance_of_random_cell_generation.py`. 
 
 - Pseudo-cell Generation Task:
