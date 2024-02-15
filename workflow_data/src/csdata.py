@@ -1,6 +1,3 @@
-#
-# @author Rahul Dhodapkar
-#
 import zlib
 
 import igraph as ig
