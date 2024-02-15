@@ -8,7 +8,15 @@ import pandas as pd
 
 from src.utils import post_process_generated_cell_sentences, convert_cell_sentence_back_to_expression_vector
 def get_vocab(path):
-    # Load in gene vocabulary
+    """
+    Load and process the gene vocabulary from a specified file.
+    
+    Parameters:
+    - path: Path to the vocabulary file.
+    
+    Returns:
+    - List of unique, uppercase gene names.
+    """
     global_vocab = set()
     with open(path, "r") as fp:
         for line in fp:
@@ -24,14 +32,27 @@ def get_vocab(path):
 
 
 def reconstruct(path_input,path_output):
-
+    """
+    Reconstruct cell expression data from sentences and save to an AnnData object.
+    
+    Parameters:
+    - path_input: Path to the input JSON file containing cell sentences.
+    - path_output: Path to the output file where the AnnData object will be saved.
+    """
     with open(path_input, "r", encoding="utf-8") as file:
         data = json.load(file)
     
 
     all_cell_sentences_converted_back_to_expression = []
-    global_vocab_list=get_vocab('')
-    dataset_df = pd.read_csv("")
+    # Load gene vocabulary
+
+    global_vocab_list=get_vocab('vocab_human.txt') 
+    #The text file named vocab_human.txt is typically located within the cell_sentences subdirectory of the output_dir, as specified by the transform.py script.
+
+    # Load transformation parameters
+    dataset_df = pd.read_csv("transformation_metrics_and_parameters.csv")
+    #The CSV file named transformation_metrics_and_parameters.csv is typically located within the eval_output_dir, as specified by the transform.py script.
+    
     slope = dataset_df.iloc[0, 2].item()
     intercept = dataset_df.iloc[0, 3].item()
     print(f"slope: {slope:.4f}, intercept: {intercept:.4f}")
@@ -66,6 +87,7 @@ def reconstruct(path_input,path_output):
 
 
     reconstructed_adata.write_h5ad(path_output)
-
-reconstruct('','')
+json_path='yout_json_path.json'
+h5ad_path="yout_h5ad_path.h5ad"
+reconstruct(json_path,h5ad_path)
 
