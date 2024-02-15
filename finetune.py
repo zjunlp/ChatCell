@@ -11,12 +11,11 @@ import json
 os.environ["WANDB_DISABLED"]="true"
 metric = load_metric("rouge")
 
-train_json_path = ""
-valid_json_path = ""
-tokenizer_path=""
-model_path=""
-batch_size = 8
-output_dir=""
+train_json_path = "sum/train.json"
+valid_json_path = "sum/valid.json"
+tokenizer_path="your_new_tokenizer_path"
+model_path="google-t5/t5-base"
+output_dir="save_model_path"
 
 
 tokenizer = AutoTokenizer.from_pretrained(tokenizer_path)
@@ -71,6 +70,8 @@ dataset_all = dataset_dict.map(process_func, batched=True)
 
 print(dataset_all)
 # Training arguments
+batch_size = 8
+
 args = Seq2SeqTrainingArguments(
     output_dir=output_dir,
     evaluation_strategy="steps",
