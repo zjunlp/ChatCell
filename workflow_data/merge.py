@@ -27,9 +27,9 @@ def merge_and_shuffle_json(file1_json_file_path, file2_json_file_path, file3_jso
     return merged_data
 
 # File paths
-mouse_train_json_file_path = 'ma_2020_json_2/train.json'
-mouse_val_json_file_path = 'ma_2020_json_2/valid.json'
-mouse_test_json_file_path = 'ma_2020_json_2/test.json'
+mouse_train_json_file_path = 'mouse/train.json'
+mouse_val_json_file_path = 'mouse/valid.json'
+mouse_test_json_file_path = 'mouse/test.json'
 
 GSE117872_train_json_file_path = 'GSE117872/train.json'
 GSE117872_val_json_file_path = 'GSE117872/valid.json'
