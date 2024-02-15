@@ -3,13 +3,9 @@ import anndata
 import json
 from tqdm import tqdm
 import scanpy as sc
-from src.utils import post_process_generated_cell_sentences, convert_cell_sentence_back_to_expression_vector
 
-cell500=['Dermal Fibroblast', 'TAC-1', 'IRS', 'Basal', 'Medulla', 'alowCD34+ bulge', 'Mix', 'ORS', 'Infundibulum', 'Spinous', 'ahighCD34+ bulge', 'TAC-2', 'Hair Shaft-cuticle.cortex']
-cell500.append('Endothelial')
-cell500.append('Isthmus')
-cell500.append('Dermal Papilla')
-print(len(cell500))
+# List of cell types that have appeared at least 500 times in the training dataset
+cell500=['Dermal Fibroblast', 'TAC-1', 'IRS', 'Basal', 'Medulla', 'alowCD34+ bulge', 'Mix', 'ORS', 'Infundibulum', 'Spinous', 'ahighCD34+ bulge', 'TAC-2', 'Hair Shaft-cuticle.cortex','Endothelial','Isthmus','Dermal Papilla']
 for i in range(len(cell500)):
     cell500[i] = ' ' + cell500[i] 
 
@@ -77,7 +73,20 @@ initial_prompt_templates = [
 ]
 
 print(len(cell500))
+
+
 def get_sentence(path_input,path_output):
+    """
+    Processes input JSON data to filter and annotate items based on two criteria:
+    1. The item must be part of a Pseudo-cell Generation task.
+    2. The cell type associated with the item must have appeared at least 500 times in the training set.
+
+    This ensures that only relevant data for Pseudo-cell Generation tasks with sufficiently represented cell types are included.
+
+    Args:
+    - path_input: Path to the input JSON file.
+    - path_output: Path for saving the processed output JSON file.
+    """
     with open(path_input, "r", encoding="utf-8") as file:
         data = json.load(file)
     filtered_data = []
@@ -86,8 +95,8 @@ def get_sentence(path_input,path_output):
         for prompt in initial_prompt_templates:
             if(item['source'].startswith(prompt)):
                 flag=1
+        # If not a match, it's considered a Pseudo-cell Generation task
         if flag==0:
-
             for cell_type in cell500:
                 if cell_type in item['source']:
                     item['cell_type']=cell_type.strip()
@@ -95,8 +104,13 @@ def get_sentence(path_input,path_output):
                     filtered_data.append(item)
                     break
     print(len(filtered_data))
+    # Output the filtered and annotated data to a new JSON file
     with open(path_output, "w", encoding="utf-8") as output_file:
         json.dump(filtered_data, output_file, indent=4, ensure_ascii=False)
 
+# Define input and output file paths
+input_path='your_sum_test.json'
+output_Pseudo-cell_path='your_Pseudo-cell_test.json'
 
-get_sentence('','')
+# Call the function with the specified input and output paths
+get_sentence(input_path,output_Pseudo-cell_path)
