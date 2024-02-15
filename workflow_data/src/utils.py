@@ -1,7 +1,3 @@
-#
-# @author Rahul Dhodapkar <rahul.dhodapkar@yale.edu>
-#
-
 import os
 import sys
 from collections import OrderedDict
