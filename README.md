@@ -166,7 +166,25 @@ Change to the evaluation directory with the command: `cd workflow_data`.
 - Run `python merge.py` to start the merging process. This will combine the specified training, validation, and testing datasets into a unified format, ready for further analysis or model training.
 
 
-<h3 id="2">🛠️ Step2: Train and generate</h3>
+<h3 id="7"> 📜 Step2 : Vocabulary Adaptation</h3>
+
+To adapt the tokenizer vocabulary with new terms from cell biology, follow these steps using the `vocabulary_adaptation.py` script.
+
+- Ensure you have the following parameters configured in the script before running it:
+
+  - `tokenizer_last`: The path to the directory containing the pre-existing tokenizer.
+
+  - `tokenizer_now`: The destination path where the updated tokenizer will be saved.
+
+  - `GSE117872_json_file_path`: This should be set to the `output_json_path` variable from the `GSE117872_to_json.py` script
+
+  - `GSE149383_json_file_path`: Similarly, this should match the `output_json_path` variable in the `GSE149383_to_json.py` script.
+
+  - `cell_sentences_hf_path`: This path should correspond to the `cell_sentences_hf` directory, which is specified as the `output_dir` variable within the `transform.py` script
+
+- Once all parameters are configured, execute the script to update the tokenizer's vocabulary with new cell biology terms. Run the following command in your terminal: `python vocabulary_adaptation.py`.
+
+<h3 id="2">🛠️ Step3: Train and generate</h3>
 
 **1. Training**
 
@@ -186,7 +204,7 @@ Change to the evaluation directory with the command: `cd workflow_data`.
   - Start the batch inference process with: `python inference_batch.py`.
 
 
-<h3 id="3">⌨️ Step3: Translating sentences into gene expressions</h3>
+<h3 id="3">⌨️ Step4: Translating sentences into gene expressions</h3>
 
 **For the pseudo-cell generation task, we also translate sentences into gene expressions, including data extraction and transformation stages.**
 
