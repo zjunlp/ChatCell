@@ -8,8 +8,8 @@ import scanpy as sc
 import pandas as pd
 
 # Load data
-my_data_path=""
-ground_truth_data_path=""
+my_data_path="path_to_your_data.h5ad"
+ground_truth_data_path="path_to_ground_truth_data.h5ad"
 k = 5
 
 my_data = anndata.read_h5ad(my_data_path)
