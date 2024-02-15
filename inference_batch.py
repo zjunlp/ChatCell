@@ -11,9 +11,9 @@ import json
 from tqdm import tqdm  
 # Define paths and load the model and tokenizer
 
-model_folder = ""
-input_path=""
-output_path=""
+model_folder = "zjunlp/chatcell-small"
+input_path="input_path.json"
+output_path="output_path.json"
 tokenizer = AutoTokenizer.from_pretrained(model_folder)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_folder)
 print(f"Tokenizer vocabulary size: {len(tokenizer.vocab.keys())}")
