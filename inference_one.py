@@ -7,12 +7,10 @@ from transformers import (
     AutoModelForSeq2SeqLM,
 )
 import torch
-import json
-from tqdm import tqdm  
 
 # Set the path to the  model and specify the input text
-model_folder = ""
-input_text=""
+model_folder = "zjunlp/chatcell-small"
+input_text="Detail the 100 starting genes for a Mix, ranked by expression level: "
 tokenizer = AutoTokenizer.from_pretrained(model_folder)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_folder)
 print(f"Tokenizer vocabulary size: {len(tokenizer.vocab.keys())}")
