@@ -6,9 +6,9 @@ from tqdm  import tqdm
 
 random_seed = 42  # You can use any integer value as the seed
 input_path='output_dir_in_transform.py_path'
-train_json_file_path = 'mouse_train.json'
-val_json_file_path = 'mouse_valid.json'
-test_json_file_path = 'mouse_test.json'
+train_json_file_path = 'mouse/train.json'
+val_json_file_path = 'mouse/valid.json'
+test_json_file_path = 'mouse/test.json'
 
 # Load the dataset
 dataset = load_from_disk(input_path)
