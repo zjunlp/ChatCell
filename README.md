@@ -193,7 +193,7 @@ print(output_text)
   - After generating the necessary files, proceed by configuring `sentence_to_expression.py` with the appropriate parameters for the translation process.
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
  
-<h3 id="4">🚀 Step4: evaluation</h3>
+<h3 id="4">🚀 Step4: Evaluation</h3>
 
 To evaluate the performance of various tasks, follow these steps:
 
