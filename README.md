@@ -18,8 +18,8 @@
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
   <a href="#3">⌚️ QuickStart</a> •
   <a href="#4">🛠️ Usage</a> •
-  <a href="#6">🚀 Evaluation</a> •
-  <a href="#5">📝 Cite</a>
+  <a href="#5">🚀 Evaluation</a> •
+  <a href="#6">📝 Cite</a>
 </p>
 
 
@@ -42,8 +42,8 @@
 - [🧬 Single-cell Analysis Tasks](#2)
 - [⌚️ QuickStart](#3)
 - [🛠️ Usage](#4)
-- [🚀 Evaluation](#6)
-- [📝 Cite](#5)
+- [🚀 Evaluation](#5)
+- [📝 Cite](#6)
 
 ---
 
@@ -195,27 +195,34 @@ print(output_text)
   - After generating the necessary files, proceed by configuring `sentence_to_expression.py` with the appropriate parameters for the translation process.
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
  
-<h3 id="6">🚀 Step4: Evaluation</h3>
+
+<h2 id="5">🚀 Step4: Evaluation</h2>
 
 To evaluate the performance of various tasks, follow these steps:
 
-- Navigate to the `evaluation` directory. `cd evaluation`
+- Change to the evaluation directory with the command: `cd evaluation`.
 
-- For random cell generation task, Set the parameters `json_path` and `global_path` as follows:
+- Random Cell Generation Task:
+  - Open `Performance_of_random_cell_generation.py`.
+  - Specify the `json_path` to the JSON file with the generated data.
+  - Specify the `global_path` to the global gene vocabulary file, usually located in the `cell_sentences` subdirectory within `output_dir` specified by the `transform.py` script, and is named `vocab_human.txt`.￼￼￼
+  - Run the command: `python Performance_of_random_cell_generation.py`. 
 
-  - `json_path`: Path to the JSON file containing the generated data.
-  - `global_path`: Path to the file containing the global gene vocabulary.This path typically resides within the `output_dir` directory specified in the `transform.py` script, under the `cell_sentences` subdirectory, named `vocab_human.txt`.
+- Pseudo-cell Generation Task:
+  - Depending on the format of your data, open `python Performance_of_pseudo-cell_generation_lev.py`, or `python Performance_of_pseudo-cell_generation_expr.py`.
+  - Specify the `my_data_path` to the JSON file with the generated pseudo-cell data.
+  - Specify the `ground_truth_data_path` to the JSON file with the ground truth data.
+  - Specify the `k` to the K-value for KNN analysis.
+  - Depending on the format of your data, run: `python Performance_of_pseudo-cell_generation_lev.py`, or `python Performance_of_pseudo-cell_generation_expr.py`.
 
-  - After setting the parameters, `python Performance_of_random_cell_generation.py`. 
+- Cell Type Annotation and Drug Sensitivity Prediction Tasks:
+  - Open `python performance_of_classification.py`.
+  - Specify the `my_data_path` to the JSON file containing the generated data for the task.
+  - Run the command: `python performance_of_classification.py`.
 
-- For the pseudo-cell generation task, set the parameters `my_data_path`, `ground_truth_data_path`, and `k` as follows:
-  - `my_data_path`,`ground_truth_data_path`: Paths to the first and second JSON files containing the generated data and ground truth data respectively.
-  - `k`: The value of k for KNN.
-  - After setting the parameters, run either `python Performance_of_pseudo-cell_generation_lev.py` or `python Performance_of_pseudo-cell_generation_expr.py`, depending on the data format.
-- For both the cell type annotation task and drug sensitivity prediction task, which entail classification challenges, simply specify the parameter `my_data_path` as detailed below:
-  - `my_data_path`: Path to the JSON file containing the generated data.
-  - After setting the parameters, `python performance_of_classification.py`. 
-<h2 id="5">📝 Cite</h2>
+ 
+  
+<h2 id="6">📝 Cite</h2>
 
 If you use our repository, please cite the following related paper:
 ```
