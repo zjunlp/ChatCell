@@ -18,6 +18,7 @@
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
   <a href="#3">⌚️ QuickStart</a> •
   <a href="#4">🛠️ Usage</a> •
+  <a href="#6">🚀 Evaluation</a> •
   <a href="#5">📝 Cite</a>
 </p>
 
@@ -41,6 +42,7 @@
 - [🧬 Single-cell Analysis Tasks](#2)
 - [⌚️ QuickStart](#3)
 - [🛠️ Usage](#4)
+- [🚀 Evaluation](#6)
 - [📝 Cite](#5)
 
 ---
@@ -193,7 +195,7 @@ print(output_text)
   - After generating the necessary files, proceed by configuring `sentence_to_expression.py` with the appropriate parameters for the translation process.
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
  
-<h3 id="4">🚀 Step4: Evaluation</h3>
+<h3 id="6">🚀 Step4: Evaluation</h3>
 
 To evaluate the performance of various tasks, follow these steps:
 
