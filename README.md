@@ -62,11 +62,11 @@
 Figure 1:  (a) Comparison of traditional single-cell engineering and <b>ChatCell</b>. (b) Overview of <b>ChatCell</b>.
 </div>
 <br>
-We present <b>ChatCell</b>, a new paradigm that leverages natural language to make single-cell analysis more accessible and intuitive.
+We present <b>ChatCell</b>, a new approach that leverages natural language to make single-cell analysis more accessible and intuitive.
 
 - Initially, we convert scRNA-seq data into a single-cell language that LLMs can readily interpret.
 - Subsequently, we employ templates to integrate this single-cell language with task descriptions and target outcomes, creating comprehensive single-cell instructions.
-- To improve the LLM's expertise in the single-cell domain,  we conduct vocabulary adaptation, enriching the model with a specialized single-cell lexicon.
+- To improve the LLM's expertise in the single-cell domain,  we initialize with T5 and conduct vocabulary adaptation, enriching the model with a specialized single-cell lexicon.
 - Following this, we utilize unified sequence generation to empower the model to adeptly execute a range of single-cell tasks.
 
 
