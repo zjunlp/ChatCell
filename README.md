@@ -262,4 +262,10 @@ Special thanks to the authors of [Cell2Sentence: Teaching Large Language Models 
 
 The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/transform.py) in this project are grounded in their research. Grateful for their valuable contributions to the field. 
 
+### Other Related Projects
 
+- [Cell2Sentence](https://github.com/rahuldhodapkar/cell2sentence)
+- [CellPLM](https://github.com/OmicsML/CellPLM)
+- [scGPT](https://github.com/bowang-lab/scGPT)
+- [ScBERT](https://github.com/TencentAILabHealthcare/scBERT)
+- [GenePT](https://github.com/yiqunchen/GenePT)
