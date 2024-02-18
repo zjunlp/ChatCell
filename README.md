@@ -135,7 +135,7 @@ Change to the evaluation directory with the command: `cd workflow_data`.
 
 **1. For tasks such as random cell sentence generation, pseudo-cell generation, and cell type annotation, we utilize cells from the SHARE-seq mouse skin dataset.**
 
-- Follow these steps to use the  `transform.py` script to **translate scENA-seq data into cell sentence**:
+- Follow these steps to use the  `transform.py` script (This file was initially developed by the [Cell2Sentence](https://github.com/vandijklab/cell2sentence-ft) team, thanks for their great work!🤗) to **translate scENA-seq data into cell sentence**:
 
   - Define `data_filepath` to specify the path to your downloaded SHARE-seq mouse skin dataset `.h5ad` file.
   - Define `output_dir` to specify the directory where the generated cell sentences will be saved.
