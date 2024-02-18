@@ -29,6 +29,14 @@
 
 </div>
 
+## ✨ Acknowledgements 
+
+Special thanks to the authors of [Cell2Sentence: Teaching Large Language Models the Language of Biology](https://github.com/vandijklab/cell2sentence-ft) and [Representing cells as sentences enables natural-language processing for single-cell transcriptomics
+](https://github.com/rahuldhodapkar/cell2sentence) for their inspiring work. 
+
+The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/transform.py) in this project are grounded in their research. Grateful for their valuable contributions to the field. 
+
+
 ## 🆕 News
 
 - **\[Feb 2024\]** Our [ChatCell app](https://chat.openai.com/g/g-vUwj222gQ-chatcell) is now live on GPTStore, give it a try📱!
@@ -254,13 +262,6 @@ If you use our repository, please cite the following related paper:
   year={2024},
 }
 ```
-
-## ✨ Acknowledgements 
-
-Special thanks to the authors of [Cell2Sentence: Teaching Large Language Models the Language of Biology](https://github.com/vandijklab/cell2sentence-ft) and [Representing cells as sentences enables natural-language processing for single-cell transcriptomics
-](https://github.com/rahuldhodapkar/cell2sentence) for their inspiring work. 
-
-The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/transform.py) in this project are grounded in their research. Grateful for their valuable contributions to the field. 
 
 ### Other Related Projects
 
