@@ -266,6 +266,8 @@ The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/tra
 
 - [Cell2Sentence](https://github.com/rahuldhodapkar/cell2sentence)
 - [CellPLM](https://github.com/OmicsML/CellPLM)
-- [scGPT](https://github.com/bowang-lab/scGPT)
+- [ScGPT](https://github.com/bowang-lab/scGPT)
 - [ScBERT](https://github.com/TencentAILabHealthcare/scBERT)
 - [GenePT](https://github.com/yiqunchen/GenePT)
+- [ScMulan](https://github.com/SuperBianC/scMulan)
+- [bulk2space](https://github.com/ZJUFanLab/bulk2space)
