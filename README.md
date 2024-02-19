@@ -13,7 +13,6 @@
   <a href="https://www.zjukg.org/project/ChatCell">💻 Homepage</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
   <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
-  <a href="https://arxiv.org/abs/2402.08303">📑 Paper</a> •
   <a href="#1">🏖️ Overview</a> •
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
   <a href="#3">⌚️ QuickStart</a> •
@@ -42,7 +41,6 @@ The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/tra
 - **\[Feb 2024\]** Our [ChatCell app](https://chat.openai.com/g/g-vUwj222gQ-chatcell) is now live on GPTStore, give it a try📱!
 - **\[Feb 2024\]** We released the model weights based on T5 in [small](https://huggingface.co/zjunlp/chatcell-small), [base](https://huggingface.co/zjunlp/chatcell-base), and [large](https://huggingface.co/zjunlp/chatcell-large) configurations on Huggingface 🤗.
 - **\[Feb 2024\]** We released the [instructions of ChatCell](https://huggingface.co/datasets/zjunlp/ChatCell-Instructions) on Huggingface 🤗.
-- **\[Feb 2024\]** We released the [paper](https://arxiv.org/abs/2402.08303).
 
 
 ## 📌 Table of Contents
