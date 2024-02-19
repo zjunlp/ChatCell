@@ -7,10 +7,8 @@
 <h2 align="center">  <img src="figure/logo.png" width="8%" height="18%"> ChatCell: Facilitating Single-Cell Analysis with Natural Language </h2>
 
 <p align="center">
-  <a href="https://chat.openai.com/g/g-vUwj222gQ-chatcell">💻GPTStore App</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
-  <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
-  <a href="#1">🏖️ Overview</a> •
+  <a href="https://chat.openai.com/g/g-vUwj222gQ-chatcell">🍎 Demo</a> •
   <a href="#2">🧬 Single-cell Analysis Tasks</a> •
   <a href="#3">⌚️ QuickStart</a> •
   <a href="#4">🛠️ Usage</a> •
@@ -19,9 +17,9 @@
 </p>
 
 
-
 <div align=center><img src="figure/intro.gif" width="60%" height="100%" /></div>
-<b>ChatCell</b> allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively.
+
+<b>ChatCell</b> allows researchers to input instructions in either natural or single-cell language, thereby facilitating the execution of necessary tasks in single-cell analysis. Black and red texts denote human and single-cell language, respectively. Have a try with the demo at [GPTStore App](https://chat.openai.com/g/g-vUwj222gQ-chatcell)!
 
 </div>
 
