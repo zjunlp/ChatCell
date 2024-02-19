@@ -205,6 +205,7 @@ The drug sensitivity prediction task aims to predict the response of different c
  
   
 <h2 id="6">📝 Cite</h2>
+
 ```
 @article{fang2024chatcell,
   title={ChatCell: Facilitating Single-Cell Analysis with Natural Language},
