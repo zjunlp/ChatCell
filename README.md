@@ -42,7 +42,6 @@ The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/tra
 
 ## 📌 Table of Contents
 
-- [🏖️ Overview](#1)
 - [⌚️ QuickStart](#2)
 - [🛠️ Usage](#3)
 - [🚀 Evaluation](#4)
