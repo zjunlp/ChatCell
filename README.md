@@ -51,47 +51,6 @@ The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/tra
 
 ---
 
-<h2 id="1">🏖️ Overview</h2>
-
-**Background**
-- Single-cell biology examines the intricate functions of the cells, ranging from energy production to genetic information transfer, playing a critical role in unraveling the fundamental principles of life and mechanisms influencing health and disease. 
-- The field has witnessed a surge in single-cell RNA sequencing (scRNA-seq) data, driven by advancements in high-throughput sequencing and reduced costs.
-- Traditional single-cell foundation models leverage extensive scRNA-seq datasets, applying NLP techniques to analyze gene expression matrices—structured formats that simplify scRNA-seq data into computationally tractable representations—during pre-training. They are subsequently fine-tuned for distinct single-cell analysis tasks, as shown in Figure (a).
-
-<p align="center">
-<img src="figure/overview.jpg"  width="100%" height="60%">
-</p>
-<div align="center">
-Figure 1:  (a) Comparison of traditional single-cell engineering and <b>ChatCell</b>. (b) Overview of <b>ChatCell</b>.
-</div>
-<br>
-The project <b>ChatCell</b> aims to leverage natural language to make single-cell analysis more accessible and intuitive.
-
-- Initially, we convert scRNA-seq data into a single-cell language that LLMs can readily interpret.
-- Subsequently, we employ templates to integrate this single-cell language with task descriptions and target outcomes, creating comprehensive single-cell instructions.
-- To improve the LLM's expertise in the single-cell domain,  we initialize with T5 and conduct vocabulary adaptation, enriching the model with a specialized single-cell lexicon.
-- Following this, we utilize unified sequence generation to empower the model to adeptly execute a range of single-cell tasks.
-
-
-<h2 id="2">⌚️ QuickStart</h2>
-
-```python
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-
-tokenizer = AutoTokenizer.from_pretrained("zjunlp/chatcell-small")
-model = AutoModelForSeq2SeqLM.from_pretrained("zjunlp/chatcell-small")
-input_text="Detail the 100 starting genes for a Mix, ranked by expression level: "
-
-# Encode the input text and generate a response with specified generation parameters
-input_ids = tokenizer(input_text,return_tensors="pt").input_ids
-output_ids = model.generate(input_ids, max_length=512, num_return_sequences=1, no_repeat_ngram_size=2, top_k=50, top_p=0.95, do_sample=True)
-
-# Decode and print the generated output text
-output_text = tokenizer.decode(output_ids[0],skip_special_tokens=True)
-print(output_text)
-```
-
-
 
 <h2 id="3">🛠️ Usage</h2>
 
