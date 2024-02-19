@@ -252,13 +252,10 @@ To evaluate the performance of various tasks, follow these steps:
  
   
 <h2 id="6">📝 Cite</h2>
-
-If you use our repository, please cite the following related paper:
 ```
 @article{fang2024chatcell,
   title={ChatCell: Facilitating Single-Cell Analysis with Natural Language},
   author={Fang, Yin and Liu, Kangwei and Zhang, Ningyu and Deng, Xinle and Yang, Penghui and Chen, Zhuo and Tang, Xiangru and Gerstein, Mark and Fan, Xiaohui and Chen, Huajun},
-  journal={arXiv preprint arXiv:2402.08303},
   year={2024},
 }
 ```
