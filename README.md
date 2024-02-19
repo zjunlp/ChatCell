@@ -5,10 +5,10 @@
 <p align="center">
   <a href="https://www.zjukg.org/project/ChatCell">💻 Demo</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
-  <a href="#5">🧬 Single-cell Analysis Tasks</a> •
   <a href="#2">⌚️ QuickStart</a> •
   <a href="#3">🛠️ Usage</a> •
   <a href="#4">🚀 Evaluation</a> •
+  <a href="#5">🧬 Single-cell Analysis Tasks</a> •
   <a href="#6">📝 Cite</a>
 </p>
 
