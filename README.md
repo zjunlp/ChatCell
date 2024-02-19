@@ -14,9 +14,11 @@
 
 <div align=center><img src="figure/intro.gif" width="60%" height="100%" /></div>
 
-The project <b>ChatCell</b> aims to facilitate single-cell analysis with natural language, which derives from the [Cell2Sentence](https://github.com/vandijklab/cell2sentence-ft) technique to generate cell tokens and utilizes cell vocabulary adaptation for T5-based pre-training. Have a try with the demo at [GPTStore App](https://chat.openai.com/g/g-vUwj222gQ-chatcell)!
-
 </div>
+
+The project <b>ChatCell</b> aims to facilitate single-cell analysis with natural language, which derives from the [Cell2Sentence](https://github.com/vandijklab/cell2sentence-ft) technique to obtain cell language tokens and utilizes cell vocabulary adaptation for T5-based pre-training. Have a try with the demo at [GPTStore App](https://chat.openai.com/g/g-vUwj222gQ-chatcell)!
+
+
 
 ## ✨ Acknowledgements 
 
