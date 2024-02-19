@@ -2,15 +2,12 @@
 
 <div align="center">
 
-[![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm-dark.svg)](https://huggingface.co/papers/2402.08303)
-[![Code License](https://img.shields.io/badge/Code%20License-MIT-green.svg)](https://github.com/zjunlp/ChatCell/blob/main/LICENSE)
-[![Data License](https://img.shields.io/badge/Data%20License-CC%20BY%204.0-red.svg)](https://github.com/zjunlp/ChatCell/blob/main/DATA_LICENSE)
 
 
 <h2 align="center">  <img src="figure/logo.png" width="8%" height="18%"> ChatCell: Facilitating Single-Cell Analysis with Natural Language </h2>
 
 <p align="center">
-  <a href="https://www.zjukg.org/project/ChatCell">💻 Homepage</a> •
+  <a href="https://chat.openai.com/g/g-vUwj222gQ-chatcell">💻GPTStore App</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
   <a href="https://huggingface.co/spaces/zjunlp/Chatcell">🍎 Demo</a> •
   <a href="#1">🏖️ Overview</a> •
@@ -46,10 +43,10 @@ The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/tra
 ## 📌 Table of Contents
 
 - [🏖️ Overview](#1)
-- [🧬 Single-cell Analysis Tasks](#2)
-- [⌚️ QuickStart](#3)
-- [🛠️ Usage](#4)
-- [🚀 Evaluation](#5)
+- [⌚️ QuickStart](#2)
+- [🛠️ Usage](#3)
+- [🚀 Evaluation](#4)
+- [🧬 Single-cell Analysis Tasks](#5)
 - [📝 Cite](#6)
 
 ---
@@ -68,7 +65,7 @@ The [`src`](./workflow_data/src) folder and [`transform.py`](./workflow_data/tra
 Figure 1:  (a) Comparison of traditional single-cell engineering and <b>ChatCell</b>. (b) Overview of <b>ChatCell</b>.
 </div>
 <br>
-We present <b>ChatCell</b>, a new approach that leverages natural language to make single-cell analysis more accessible and intuitive.
+The project <b>ChatCell</b> aims to leverage natural language to make single-cell analysis more accessible and intuitive.
 
 - Initially, we convert scRNA-seq data into a single-cell language that LLMs can readily interpret.
 - Subsequently, we employ templates to integrate this single-cell language with task descriptions and target outcomes, creating comprehensive single-cell instructions.
@@ -76,42 +73,7 @@ We present <b>ChatCell</b>, a new approach that leverages natural language to ma
 - Following this, we utilize unified sequence generation to empower the model to adeptly execute a range of single-cell tasks.
 
 
-<h2 id="2">🧬 Single-cell Analysis Tasks</h2>
-
-We concentrate on the following single-cell tasks:
-
-- <b>Random Cell Sentence Generation.</b>
-Random cell sentence generation challenges the model to create cell sentences devoid of predefined biological conditions or constraints. This task aims to evaluate the model's ability to generate valid and contextually appropriate cell sentences, potentially simulating natural variations in cellular behavior. 
-
-<p align="center">
-<img src="figure/example1.jpg"  width="80%" height="60%">
-</p>
-
-
-- <b>Pseudo-cell Generation.</b>
-Pseudo-cell generation focuses on generating gene sequences tailored to specific cell type labels. This task is vital for unraveling gene expression and regulation across different cell types, offering insights for medical research and disease studies, particularly in the context of diseased cell types.
-
-
-<p align="center">
-<img src="figure/example2.jpg"  width="80%" height="60%">
-</p>
-
-- <b>Cell Type Annotation.</b>
-For cell type annotation, the model is tasked with precisely classifying cells into their respective types based on gene expression patterns encapsulated in cell sentences. This task is fundamental for understanding cellular functions and interactions within tissues and organs, playing a crucial role in developmental biology and regenerative medicine.
-
-<p align="center">
-<img src="figure/example3.jpg"  width="80%" height="60%">
-</p>
-
-- <b>Drug Sensitivity Prediction.</b>
-The drug sensitivity prediction task aims to predict the response of different cells to various drugs. It is pivotal in designing effective, personalized treatment plans and contributes significantly to drug development, especially in optimizing drug efficacy and safety.
-
-
-<p align="center">
-<img src="figure/example4.jpg"  width="80%" height="60%">
-</p>
-
-<h2 id="3">⌚️ QuickStart</h2>
+<h2 id="2">⌚️ QuickStart</h2>
 
 ```python
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
@@ -131,7 +93,7 @@ print(output_text)
 
 
 
-<h2 id="4">🛠️ Usage</h2>
+<h2 id="3">🛠️ Usage</h2>
 
 <h3 id="1">📚 Step1: Prepare the data</h3>
 
@@ -223,7 +185,7 @@ To adapt the tokenizer vocabulary with new terms from cell biology, follow these
   - Execute the transformation script with the command: `python sentence_to_expression.py`.
  
 
-<h2 id="5">🚀 Evaluation</h2>
+<h2 id="4">🚀 Evaluation</h2>
 
 To evaluate the performance of various tasks, follow these steps:
 
@@ -247,6 +209,40 @@ To evaluate the performance of various tasks, follow these steps:
   - Specify the `my_data_path` to the JSON file containing the generated data for the task.
   - Run the command: `python performance_of_classification.py`.
 
+<h2 id="5">🧬 Single-cell Analysis Tasks</h2>
+
+ ChatCell can handle the following single-cell tasks:
+
+- <b>Random Cell Sentence Generation.</b>
+Random cell sentence generation challenges the model to create cell sentences devoid of predefined biological conditions or constraints. This task aims to evaluate the model's ability to generate valid and contextually appropriate cell sentences, potentially simulating natural variations in cellular behavior. 
+
+<p align="center">
+<img src="figure/example1.jpg"  width="80%" height="60%">
+</p>
+
+
+- <b>Pseudo-cell Generation.</b>
+Pseudo-cell generation focuses on generating gene sequences tailored to specific cell type labels. This task is vital for unraveling gene expression and regulation across different cell types, offering insights for medical research and disease studies, particularly in the context of diseased cell types.
+
+
+<p align="center">
+<img src="figure/example2.jpg"  width="80%" height="60%">
+</p>
+
+- <b>Cell Type Annotation.</b>
+For cell type annotation, the model is tasked with precisely classifying cells into their respective types based on gene expression patterns encapsulated in cell sentences. This task is fundamental for understanding cellular functions and interactions within tissues and organs, playing a crucial role in developmental biology and regenerative medicine.
+
+<p align="center">
+<img src="figure/example3.jpg"  width="80%" height="60%">
+</p>
+
+- <b>Drug Sensitivity Prediction.</b>
+The drug sensitivity prediction task aims to predict the response of different cells to various drugs. It is pivotal in designing effective, personalized treatment plans and contributes significantly to drug development, especially in optimizing drug efficacy and safety.
+
+
+<p align="center">
+<img src="figure/example4.jpg"  width="80%" height="60%">
+</p>
  
   
 <h2 id="6">📝 Cite</h2>
