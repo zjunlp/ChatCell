@@ -58,6 +58,32 @@ def construct_cell_type_template(cell_type):
         "Identify the 100 leading genes in a{} based on expression levels: ",
         "Show the 100 primary genes for a{}, sorted by decreasing expression: ",
         "Enumerate the 100 most abundantly expressed starting genes in a{}: ",
+        ## add
+        "Reveal the first 100 genes with the highest expression in a{}, sorted in order of decreasing levels: ",
+        "Compile a list of the top 100 genes by expression in a{}, descending from highest to lowest: ",
+        "Pinpoint the 100 leading genes based on expression levels in a{}: ",
+        "Disclose the initial 100 genes showing the highest expression in a{}, in a descending sequence: ",
+        "Present the foremost 100 genes by expression in a{}, ranked from the highest to the lowest: ",
+        "Highlight the 100 genes with the utmost expression in a{}, arranged by diminishing levels: ",
+        "Unveil the top 100 genes characterized by their expression in a{}, in descending order: ",
+        "Report on the first 100 genes with maximum expression in a{}, listed from highest to lowest: ",
+        "Profile the 100 genes leading in expression in a{}, ordered by decreasing levels: ",
+        "Summarize the primary 100 genes by expression level in a{}, from the highest to the lowest: ",
+        "Expose the 100 genes at the pinnacle of expression in a{}, sequenced by decreasing order: ",
+        "Discern the top 100 genes for expression in a{}, aligned from highest to lowest: ",
+        "Uncover the first 100 genes exhibiting the highest levels of expression in a{}, organized by descending order: ",
+        "Depict the leading 100 genes in terms of expression in a{}, ranked by decreasing levels: ",
+        "Characterize the 100 most prominently expressed genes in a{}, in a downward sequence: ",
+        "Account for the 100 genes with superior expression in a{}, sorted from highest to lowest: ",
+        "Render the 100 most expressed genes in a{}, categorized by descending expression levels: ",
+        "Illustrate the 100 top-expressed genes in a{}, ordered by decreasing levels of expression: ",
+        "Convey the initial 100 genes with the highest level of expression in a{}, from highest to lowest: ",
+        "Sketch the primary 100 genes based on their expression in a{}, descending from highest expression: ",
+        "Clarify the 100 genes leading in expression within a{}, sorted in decreasing order of expression: ",
+        "Communicate the first 100 genes ranked by expression in a{}, from the highest to the lowest levels: ",
+        "Indicate the 100 most prominently featured genes in a{} based on expression, in reverse order: ",
+        "Relate the top 100 genes according to expression in a{}, descending by level: ",
+        "Itemize the 100 genes with the leading expression figures in a{}, ordered from the highest downward: ".
     ]
 
     selected_template = random.choice(cell_type_templates)
