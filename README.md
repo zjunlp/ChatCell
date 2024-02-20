@@ -3,7 +3,7 @@
 <h2 align="center">  <img src="figure/logo.png" width="8%" height="18%"> ChatCell: Facilitating Single-Cell Analysis with Natural Language </h2>
 
 <p align="center">
-  <a href="https://www.zjukg.org/project/ChatCell">💻 Demo</a> •
+  <a href="https://chat.openai.com/g/g-vUwj222gQ-chatcell">💻 Demo</a> •
   <a href="https://huggingface.co/datasets/zjunlp/ChatCell-Instructions">🤗 Dataset</a> •
   <a href="#2">⌚️ QuickStart</a> •
   <a href="#3">🛠️ Usage</a> •
