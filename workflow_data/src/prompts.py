@@ -182,6 +182,25 @@ def construct_prediction_template(genes):
         "These genes are most frequently associated with the cell type: ",
         "From these genes, it can be inferred that the cell type is: ",
         "The cell type best represented by these genes is: ",
+        ## add
+        "The cell type that typically exhibits these genes is: ",
+        "The genes in question are characteristic of the following cell type: ",
+        "Considering the genetic markers, the cell type is likely: ",
+        "These genetic sequences suggest a strong association with the cell type: ",
+        "The cellular identity associated with these genes is most likely: ",
+        "Analysis of these genes points to the cell type being: ",
+        "The genetic profile suggests the cell type as: ",
+        "Identifying the cell type, these genes are predominantly linked to: ",
+        "The predominant cell type for these gene expressions is: ",
+        "Correlating these genes, we deduce the cell type to be: ",
+        "Given the genetic evidence, the corresponding cell type is inferred as: ",
+        "The genetic markers indicate the cell type is: ",
+        "From the genetic signatures, the associated cell type is: ",
+        "Linking these genes to a cell type leads us to conclude: ",
+        "The cell type, as suggested by these genes, is likely: ",
+        "Drawing from these genes, the cell type is identified as: ",
+        "The gene analysis suggests a cell type affiliation with: ",
+        "These genes delineate the cell type as: "
     ]
 
     # build prompt
