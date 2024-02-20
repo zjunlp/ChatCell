@@ -52,7 +52,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 tokenizer = AutoTokenizer.from_pretrained("zjunlp/chatcell-small")
 model = AutoModelForSeq2SeqLM.from_pretrained("zjunlp/chatcell-small")
-input_text="Detail the 100 starting genes for a Mix, ranked by expression level: "
+input_text="Distinguish between resistant and sensitive cancer cells in response to Cisplatin, using the data from the 100 most expressed genes in descending order MYL12B FTL MYL12A HIST1H4C RPL23 GSTP1 RPS3 ENO1 RPLP1 TXN ANXA2 PPP1CB B2M RPLP0 HSPA8 H2AFZ TPI1 ANXA1 RPL7 GAPDH CHP1 LDHA RPL3 S100A11 PRDX1 CALM2 CAPZA1 SLC25A5 RPS27 YWHAZ GNB2L1 PTBP3 RPS6 MOB1A S100A2 ACTG1 BROX SAT1 RPL35A CA2 PSMB4 RPL8 TBL1XR1 RPS18 HNRNPH1 RPL27 RPS14 RPS11 ANP32E RPL19 C6ORF62 RPL9 EEF1A1 RPL5 COLGALT1 NPM1 CCT6A RQCD1 CACUL1 RPL4 HSP90AA1 MALAT1 ALDOA PSMA4 SEC61G RPL38 PSMB5 FABP5 HSP90AB1 RPL35 CHCHD2 EIF3E COX4I1 RPL21 PAFAH1B2 PTMA TMED4 PSMB3 H3F3B AGO1 DYNLL1 ATP5A1 LDHB COX7B ACTB RPS27A PSME2 ELMSAN1 NDUFA1 HMGB2 PSMB6 TMSB10 SET RPL12 RPL37A RPS13 EIF1 ATP5G1 RPS3A TOB1."
 
 # Encode the input text and generate a response with specified generation parameters
 input_ids = tokenizer(input_text,return_tensors="pt").input_ids
